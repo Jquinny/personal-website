@@ -1,0 +1,87 @@
+/* Basic reset and styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #9babb8;
+    color: #333;
+    text-align: center;
+}
+
+header {
+    margin: 20px 0;
+}
+
+h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+/* Social Media Icons */
+.social-media {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-media a {
+    display: inline-block;
+}
+
+.social-media img {
+    width: 40px;
+    transition: transform 0.2s;
+}
+
+.social-media img:hover {
+    transform: scale(1.2);
+}
+
+/* Main Content */
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 200px);
+    gap: 20px;
+}
+
+.grid-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 100px;
+    background: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    color: #333;
+    font-size: 1.5em;
+    border-radius: 10px;
+    transition: transform 0.2s, border 0.2s;
+}
+
+.grid-item:hover {
+    transform: scale(1.1);
+    border: 3px solid #967E76;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .grid-item {
+        width: 100%;
+    }
+}
