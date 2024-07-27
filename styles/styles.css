@@ -71,7 +71,7 @@ main {
 
 .grid-item:hover {
     transform: scale(1.1);
-    border: 3px solid #967E76;
+    outline: 3px outset #FF4191;
 }
 
 /* Responsive Design */
