@@ -1,0 +1,7 @@
+# some site settings
+repos: # will hopefully be able to use some info from here when I am grabbing github info
+  - personal-website
+  - Vehicle-Analytics-App
+  - JournAI
+  - pythons-on-a-plane
+  - AutonomousFoosball
