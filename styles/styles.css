@@ -59,24 +59,27 @@ p {
   line-height: 1.5;
 }
 
+strong {
+  color: #39beff;
+}
+
 a {
   color: #39beff;
 }
 
 a:active {
-  border: 3px solid #39beff;
+  color: white;
 }
 
 /* ---------------------------- */
-/* Header + navbar styling      */
+/* navbar styling               */
 /* ---------------------------- */
 
-header {
+nav {
   position: fixed;
   display: flex;
-  justify-content: flex-end;
-  align-content: center;
-  gap: 15%;
+  justify-content: space-between;
+  align-items: center;
   top: 0;
   left: 0;
   width: 100%;
@@ -86,28 +89,15 @@ header {
   border-bottom: solid #39beff;
 }
 
-nav {
-  display: flex;
-  justify-self: flex-end;
-  align-items: center;
-  justify-content: space-between;
-  flex-grow: 1;
-  gap: 20px;
-}
-
 .logo {
-  flex: 1;
   margin: 15px;
   align-self: center;
-  justify-self: flex-start;
-  height: 64px;
-  width: 64px;
 }
 
 .nav-item {
-  flex: 1;
-  margin: 10px;
-  padding: 10px;
+  padding: 7px;
+  display: inline-block;
+  list-style: none;
   font-family: "Orbitron", sans-serif;
   color: white;
   text-transform: uppercase;
@@ -117,33 +107,38 @@ nav {
   transition: all 300ms ease-in-out;
 }
 
+.nav-item a {
+  color: inherit;
+  text-decoration: none;
+}
+
 /* try to figure out how to get a transformation that starts drawing the border
 clockwise from the top around the nav item. Keep the border rectangular if you
 do this */
 .nav-item:hover {
   border: 3px solid #c051ff;
   border-radius: 1.5em;
+  color: #39beff;
 }
 
 #resume {
-  padding-left: 5px;
-  padding-right: 20px;
   border: 3px solid #c051ff;
-  border-radius: 1em;
+  border-radius: 1.5em;
+  margin-right: 15px;
 }
 
 #resume:hover {
   background-color: #c051ff;
   text-shadow: none;
+  color: white;
 }
 
-/* figure out how to make this go to the right and not underneath RESUME */
 #resume::after {
-  position: absolute;
   content: "";
   display: inline-block;
   width: 1em;
   height: 1em;
+  margin-left: -3px;
 
   background-size: 100%;
   background-image: url("../assets/icons/arrow-square-out-fill-svgrepo-com.svg");
@@ -178,18 +173,20 @@ do this */
 .social-media {
   display: flex;
   justify-content: center;
-  gap: 15px;
+  gap: 20px;
 }
 
 .social-media a {
   display: inline-block;
 }
 
-.social-media img {
-  width: 40px;
+.social-media ion-icon {
+  justify-self: center;
+  font-size: 32px;
+  color: white;
   transition: transform 200ms ease-in-out;
 }
 
-.social-media img:hover {
-  transform: scale(1.1);
+.social-media ion-icon:hover {
+  transform: scale(1.2);
 }

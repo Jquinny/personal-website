@@ -43,7 +43,7 @@
     <script src="scripts/test.js" defer></script>
   </head>
   <body>
-    <header>
+    <nav>
       <a href="#">
         <img
           class="logo"
@@ -52,19 +52,15 @@
         />
       </a>
 
-      <nav>
-        <a class="nav-item" href="#about">About</a>
-        <a class="nav-item" href="#projects">Projects</a>
-        <a class="nav-item" href="#contact">Contact</a>
-        <a
-          class="nav-item"
-          id="resume"
-          href="assets/Joey_Quinlan_resume.pdf"
-          target="_blank"
-          >Resume</a
-        >
-      </nav>
-    </header>
+      <ul>
+        <li class="nav-item"><a href="#about">About</a></li>
+        <li class="nav-item"><a href="#projects">Projects</a></li>
+        <li class="nav-item"><a href="#contact">Contact</a></li>
+        <li class="nav-item" id="resume">
+          <a href="assets/Joey_Quinlan_resume.pdf" target="_blank">Resume</a>
+        </li>
+      </ul>
+    </nav>
     <main>
       <section id="about">
         <h2>About</h2>
@@ -167,23 +163,23 @@
         <h2>Contact</h2>
         <div class="social-media">
           <a href="https://github.com/Jquinny" target="_blank" rel="noopener"
-            ><img src="assets/icons/github-142-svgrepo-com.svg" alt="GitHub"
-          /></a>
+            ><ion-icon name="logo-github"></ion-icon
+          ></a>
           <a
             href="https://www.linkedin.com/in/joey-quinlan-548544221/"
             target="_blank"
             rel="noopener"
-            ><img src="assets/icons/linkedin-svgrepo-com.svg" alt="LinkedIn"
-          /></a>
+            ><ion-icon name="logo-linkedin"></ion-icon
+          ></a>
           <a
             href="https://discord.com/users/708489455920611300"
             target="_blank"
             rel="noopener"
-            ><img src="assets/icons/discord-svgrepo-com.svg" alt="Discord"
-          /></a>
+            ><ion-icon name="logo-discord"></ion-icon
+          ></a>
           <a href="mailto:josephq02@outlook.com" target="_blank" rel="noopener"
-            ><img src="assets/icons/email-9-svgrepo-com.svg" alt="Email"
-          /></a>
+            ><ion-icon name="mail-outline"></ion-icon
+          ></a>
         </div>
       </section>
     </main>
@@ -198,5 +194,13 @@
         >
       </p>
     </footer>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
   </body>
 </html>
