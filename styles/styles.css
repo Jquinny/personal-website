@@ -72,21 +72,36 @@ a:active {
 /* ---------------------------- */
 
 header {
+  position: fixed;
   display: flex;
+  justify-content: flex-end;
+  align-content: center;
+  gap: 15%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 15%;
+  z-index: 1;
+  background-color: #151531;
   border-bottom: solid #39beff;
 }
 
 nav {
   display: flex;
-  gap: 0.5%;
-  overflow: auto;
-  padding: 15px;
+  justify-self: flex-end;
   align-items: center;
+  justify-content: space-between;
+  flex-grow: 1;
+  gap: 20px;
 }
 
 .logo {
-  flex: 0.15;
-  padding: 15px;
+  flex: 1;
+  margin: 15px;
+  align-self: center;
+  justify-self: flex-start;
+  height: 64px;
+  width: 64px;
 }
 
 .nav-item {
@@ -111,7 +126,8 @@ do this */
 }
 
 #resume {
-  padding: 10px;
+  padding-left: 5px;
+  padding-right: 20px;
   border: 3px solid #c051ff;
   border-radius: 1em;
 }
@@ -123,10 +139,11 @@ do this */
 
 /* figure out how to make this go to the right and not underneath RESUME */
 #resume::after {
+  position: absolute;
   content: "";
   display: inline-block;
-  width: 0.8em;
-  height: 0.8em;
+  width: 1em;
+  height: 1em;
 
   background-size: 100%;
   background-image: url("../assets/icons/arrow-square-out-fill-svgrepo-com.svg");
@@ -135,6 +152,15 @@ do this */
 /* ---------------------------- */
 /* about section styling        */
 /* ---------------------------- */
+.headshot {
+  float: right;
+  margin: 25px;
+}
+
+/* just doing this for now */
+#about {
+  margin-top: 15%;
+}
 
 /* ---------------------------- */
 /* projects section styling     */
