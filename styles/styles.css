@@ -1,36 +1,6 @@
 /* ---------------------------- */
 /* general styling */
 /* ---------------------------- */
-/* .space-mono-regular {
-  font-family: "Space Mono", monospace;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.space-mono-bold {
-  font-family: "Space Mono", monospace;
-  font-weight: 700;
-  font-style: normal;
-}
-
-.space-mono-regular-italic {
-  font-family: "Space Mono", monospace;
-  font-weight: 400;
-  font-style: italic;
-}
-
-.space-mono-bold-italic {
-  font-family: "Space Mono", monospace;
-  font-weight: 700;
-  font-style: italic;
-}
-
-.orbitron-header {
-  font-family: "Orbitron", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 800;
-  font-style: normal;
-} */
 
 html {
   font-family: "Space Mono", monospace;
@@ -45,6 +15,11 @@ html {
 *::before,
 *::after {
   box-sizing: inherit;
+}
+
+body {
+  padding: 0px;
+  margin: 10%;
 }
 
 h1,
@@ -71,6 +46,10 @@ a:active {
   color: white;
 }
 
+footer > p {
+  text-align: center;
+}
+
 /* ---------------------------- */
 /* navbar styling               */
 /* ---------------------------- */
@@ -89,9 +68,14 @@ nav {
   border-bottom: solid #39beff;
 }
 
+nav > a {
+  margin-left: 25px;
+}
+
 .logo {
-  margin: 15px;
   align-self: center;
+  width: 72px;
+  height: 72px;
 }
 
 .nav-item {
@@ -108,6 +92,7 @@ nav {
 }
 
 .nav-item a {
+  margin-left: 0px;
   color: inherit;
   text-decoration: none;
 }
@@ -124,7 +109,7 @@ do this */
 #resume {
   border: 3px solid #c051ff;
   border-radius: 1.5em;
-  margin-right: 15px;
+  margin-right: 25px;
 }
 
 #resume:hover {
@@ -163,10 +148,6 @@ do this */
 
 /* ---------------------------- */
 /* contact section styling      */
-/* ---------------------------- */
-
-/* ---------------------------- */
-/* footer-specific styling      */
 /* ---------------------------- */
 
 /* Social Media Icons */
