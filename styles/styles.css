@@ -132,14 +132,20 @@ do this */
 /* ---------------------------- */
 /* about section styling        */
 /* ---------------------------- */
-.headshot {
-  float: right;
-  margin: 25px;
-}
 
 /* just doing this for now */
 #about {
   margin-top: 15%;
+}
+
+.headshot {
+  float: right;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 1px solid #ffbb39 ;
+  box-shadow: #ffbb39 0px 0px 30px 30px;
+  width: 200px;
+  height: 200px;
 }
 
 /* ---------------------------- */
