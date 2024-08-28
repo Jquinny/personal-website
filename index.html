@@ -54,42 +54,57 @@
 
       <ul>
         <li class="nav-item"><a href="#about" id="about-link">About</a></li>
-        <li class="nav-item"><a href="#projects" id="projects-link">Projects</a></li>
-        <li class="nav-item"><a href="#contact" id="contact-link">Contact</a></li>
+        <li class="nav-item">
+          <a href="#projects" id="projects-link">Projects</a>
+        </li>
+        <li class="nav-item">
+          <a href="#contact" id="contact-link">Contact</a>
+        </li>
         <li class="nav-item" id="resume">
-          <a href="assets/Joey_Quinlan_resume.pdf" target="_blank">Resume</a>
+          <a
+            href="assets/Joey_Quinlan_resume.pdf"
+            id="resume-link"
+            target="_blank"
+            >Resume</a
+          >
         </li>
       </ul>
     </nav>
     <main>
       <section id="about">
         <h2>About</h2>
-        <img
-          class="headshot"
-          src="assets/images/headshot2.jpg"
-          title="me looking cute af"
-          alt="me looking cute af"
-        />
-        <p>
-          Currently, I am a computer science student at the University of
-          Alberta, heading into my final semester of my bachelor's degree. I've
-          dipped my toes in many domains during my time in university, such as
-          robotics, machine learning/AI, computer graphics, and compilers. I am
-          excited to tackle some high impact problems while expanding my
-          horizons and mastering my craft.
-        </p>
-        <p>
-          Outside of tech I like to spend my time in nature, either running,
-          hiking, or just going for a walk and enjoying the fresh air. There is
-          nothing quite like watching two grasshoppers battle it out on a lawn
-          chair, or a squirrel doing parkour in the trees :). I also like to
-          dabble in various other activities, such as martial arts, reading,
-          playing video games, and watching anime.
-        </p>
-        <p>
-          I hope you enjoy my <strong>out of this world</strong> developer
-          portfolio!
-        </p>
+        <div class="about-container">
+          <div class="about-content">
+            <p>
+              Currently, I am a computer science student at the University of
+              Alberta, heading into my final semester of my bachelor's degree.
+              I've dipped my toes in many domains during my time in university,
+              such as robotics, machine learning/AI, computer graphics, and
+              compilers. I am excited to tackle some high impact problems while
+              expanding my horizons and mastering my craft.
+            </p>
+            <p>
+              Outside of tech I like to spend my time in nature, either running,
+              hiking, or just going for a walk and enjoying the fresh air. There
+              is nothing quite like watching two grasshoppers battle it out on a
+              lawn chair, or a squirrel doing parkour in the trees :). I also
+              like to dabble in various other activities, such as martial arts,
+              reading, playing video games, and watching anime.
+            </p>
+            <p>
+              I hope you enjoy my <strong>out of this world</strong> developer
+              portfolio!
+            </p>
+          </div>
+          <div class="solar-system">
+            <img
+              class="headshot"
+              src="assets/images/headshot2.jpg"
+              title="me looking cute af"
+              alt="me looking cute af"
+            />;
+          </div>
+        </div>
       </section>
       <section id="projects">
         <h2>Projects</h2>
@@ -201,6 +216,7 @@
         >
       </p>
     </footer>
+    <div id="star-field"></div>
     <script
       type="module"
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
