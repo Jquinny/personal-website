@@ -40,7 +40,8 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
-    <script type="module" src="scripts.js"></script>
+    <script type="module" src="scripts/general_functionality.js"></script>
+    <script type="module" src="scripts/projects.js"></script>
   </head>
   <body>
     <nav>
@@ -49,11 +50,14 @@
           class="logo"
           src="assets/icons/rocket-ship-rocket-svgrepo-com.svg"
           width="64px height=64px"
+          title="to top"
         />
       </a>
 
       <ul>
-        <li class="nav-item"><a href="#about" id="about-link">About</a></li>
+        <li class="nav-item">
+          <a href="#about" id="about-link">About</a>
+        </li>
         <li class="nav-item">
           <a href="#projects" id="projects-link">Projects</a>
         </li>
@@ -70,6 +74,7 @@
         </li>
       </ul>
     </nav>
+
     <main>
       <section id="about">
         <h2>About</h2>
@@ -106,72 +111,12 @@
           </div>
         </div>
       </section>
+
       <section id="projects">
         <h2>Projects</h2>
-        <ul>
-          <li>test</li>
-        </ul>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur id
-          hendrerit nibh, vitae dignissim tortor. Nullam dictum augue ut elit
-          eleifend, ut viverra lacus malesuada. Donec sit amet lectus vitae odio
-          sollicitudin blandit sit amet vel metus. Sed in nibh dignissim,
-          tincidunt enim id, bibendum massa. Maecenas laoreet sem nec risus
-          cursus dapibus lobortis id est. Nunc consequat dui metus, at venenatis
-          diam molestie sed. Vivamus ullamcorper purus massa, at tristique felis
-          varius sit amet. Maecenas dictum, mauris vel molestie cursus, lacus
-          velit congue elit, nec rutrum sapien ante ut est. Maecenas id euismod
-          est. Nunc eleifend diam libero.
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur id
-          hendrerit nibh, vitae dignissim tortor. Nullam dictum augue ut elit
-          eleifend, ut viverra lacus malesuada. Donec sit amet lectus vitae odio
-          sollicitudin blandit sit amet vel metus. Sed in nibh dignissim,
-          tincidunt enim id, bibendum massa. Maecenas laoreet sem nec risus
-          cursus dapibus lobortis id est. Nunc consequat dui metus, at venenatis
-          diam molestie sed. Vivamus ullamcorper purus massa, at tristique felis
-          varius sit amet. Maecenas dictum, mauris vel molestie cursus, lacus
-          velit congue elit, nec rutrum sapien ante ut est. Maecenas id euismod
-          est. Nunc eleifend diam libero.
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur id
-          hendrerit nibh, vitae dignissim tortor. Nullam dictum augue ut elit
-          eleifend, ut viverra lacus malesuada. Donec sit amet lectus vitae odio
-          sollicitudin blandit sit amet vel metus. Sed in nibh dignissim,
-          tincidunt enim id, bibendum massa. Maecenas laoreet sem nec risus
-          cursus dapibus lobortis id est. Nunc consequat dui metus, at venenatis
-          diam molestie sed. Vivamus ullamcorper purus massa, at tristique felis
-          varius sit amet. Maecenas dictum, mauris vel molestie cursus, lacus
-          velit congue elit, nec rutrum sapien ante ut est. Maecenas id euismod
-          est. Nunc eleifend diam libero.
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur id
-          hendrerit nibh, vitae dignissim tortor. Nullam dictum augue ut elit
-          eleifend, ut viverra lacus malesuada. Donec sit amet lectus vitae odio
-          sollicitudin blandit sit amet vel metus. Sed in nibh dignissim,
-          tincidunt enim id, bibendum massa. Maecenas laoreet sem nec risus
-          cursus dapibus lobortis id est. Nunc consequat dui metus, at venenatis
-          diam molestie sed. Vivamus ullamcorper purus massa, at tristique felis
-          varius sit amet. Maecenas dictum, mauris vel molestie cursus, lacus
-          velit congue elit, nec rutrum sapien ante ut est. Maecenas id euismod
-          est. Nunc eleifend diam libero.
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur id
-          hendrerit nibh, vitae dignissim tortor. Nullam dictum augue ut elit
-          eleifend, ut viverra lacus malesuada. Donec sit amet lectus vitae odio
-          sollicitudin blandit sit amet vel metus. Sed in nibh dignissim,
-          tincidunt enim id, bibendum massa. Maecenas laoreet sem nec risus
-          cursus dapibus lobortis id est. Nunc consequat dui metus, at venenatis
-          diam molestie sed. Vivamus ullamcorper purus massa, at tristique felis
-          varius sit amet. Maecenas dictum, mauris vel molestie cursus, lacus
-          velit congue elit, nec rutrum sapien ante ut est. Maecenas id euismod
-          est. Nunc eleifend diam libero.
-        </p>
+        <div id="projects-container"></div>
       </section>
+
       <section id="contact">
         <h2>Contact</h2>
         <p>
@@ -205,6 +150,7 @@
         </div>
       </section>
     </main>
+
     <footer>
       <p>
         © Joey Quinlan 2024 - Licensed under MIT - View on
@@ -216,7 +162,9 @@
         >
       </p>
     </footer>
+
     <div id="star-field"></div>
+
     <script
       type="module"
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
