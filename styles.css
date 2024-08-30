@@ -155,11 +155,6 @@ nav {
   height: 15vh;
   z-index: 1;
   background-color: #151531;
-  /* background: linear-gradient(217deg, #39beff 30%, #151531),
-    linear-gradient(127deg, #ffbb39 20%, #151531),
-    radial-gradient(ellipse at 85% 50%, #151531, #39beff),
-    linear-gradient(336deg, #ffbb39 30%, #151531);
-  background-blend-mode: difference; */
   border-bottom: solid white;
   overflow: hidden;
 }
@@ -213,10 +208,6 @@ nav > a {
 #resume {
   margin-right: 30px;
 }
-
-/* #resume:hover {
-  background-color: #404be3;
-} */
 
 #resume::after {
   content: "";
