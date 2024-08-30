@@ -19,40 +19,41 @@ document.querySelectorAll(".nav-item a").forEach((anchor) => {
   }
 });
 
-function createNavbarCircles() {
-  // Array of colors to apply to each circle
-  const colors = ["#c051ff", "#39beff", "#404be3", "#ff5733"];
+// NOTE: this was for the solar system navbar
+// function createNavbarCircles() {
+//   // Array of colors to apply to each circle
+//   const colors = ["#c051ff", "#39beff", "#404be3", "#ff5733"];
 
-  const navItems = document.querySelectorAll(".nav-item");
-  navItems.forEach((item, index) => {
-    const anchor = item.querySelector("a");
-    const anchorWidth = anchor.getBoundingClientRect().width;
+//   const navItems = document.querySelectorAll(".nav-item");
+//   navItems.forEach((item, index) => {
+//     const anchor = item.querySelector("a");
+//     const anchorWidth = anchor.getBoundingClientRect().width;
 
-    // create a div to serve as the circle background
-    const circle = document.createElement("div");
-    circle.classList.add("circle-background");
+//     // create a div to serve as the circle background
+//     const circle = document.createElement("div");
+//     circle.classList.add("circle-background");
 
-    // size the circle based on anchor width (add padding for space)
-    const circleSize = anchorWidth + 40; // adding 40px for padding
-    circle.style.width = `${circleSize}px`;
-    circle.style.height = `${circleSize}px`;
+//     // size the circle based on anchor width (add padding for space)
+//     const circleSize = anchorWidth + 40; // adding 40px for padding
+//     circle.style.width = `${circleSize}px`;
+//     circle.style.height = `${circleSize}px`;
 
-    // set the background color for the circle
-    circle.style.backgroundColor = colors[index % colors.length];
+//     // set the background color for the circle
+//     circle.style.backgroundColor = colors[index % colors.length];
 
-    // position the circle behind the text
-    circle.style.position = "absolute";
-    circle.style.top = "50%";
-    circle.style.left = "50%";
-    circle.style.transform = "translate(-50%, -50%)";
-    circle.style.borderRadius = "50%";
-    circle.style.zIndex = "-1"; // ensure the circle is behind the text
+//     // position the circle behind the text
+//     circle.style.position = "absolute";
+//     circle.style.top = "50%";
+//     circle.style.left = "50%";
+//     circle.style.transform = "translate(-50%, -50%)";
+//     circle.style.borderRadius = "50%";
+//     circle.style.zIndex = "-1"; // ensure the circle is behind the text
 
-    // add the circle as a child of the nav item
-    item.style.position = "relative"; // Required to position the circle correctly
-    item.appendChild(circle);
-  });
-}
+//     // add the circle as a child of the nav item
+//     item.style.position = "relative"; // Required to position the circle correctly
+//     item.appendChild(circle);
+//   });
+// }
 
 // -------------------------------------------------------------------------- //
 // ----------------------- Star Functionality ------------------------------- //
@@ -113,7 +114,7 @@ function moveStars() {
 }
 
 window.addEventListener("load", () => {
-  createNavbarCircles();
+  // createNavbarCircles();
   createStars(500);
   populateProjects();
 });

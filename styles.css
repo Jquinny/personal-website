@@ -56,10 +56,22 @@ footer > p {
   text-align: center;
 }
 
+.github-link::after {
+  content: "";
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  margin-left: 3px;
+
+  background-size: 100%;
+  background-image: url("../assets/icons/github-142-svgrepo-com.svg");
+}
+
 /* ---------------------------- */
 /* navbar styling               */
 /* ---------------------------- */
-nav {
+/* NOTE: old solar system navbar stuff */
+/* nav {
   position: fixed;
   display: flex;
   justify-content: space-between;
@@ -77,9 +89,10 @@ nav {
   );
   border-bottom: solid white;
   overflow: hidden;
-}
+} */
 
 /* targets the anchor around the logo */
+/*
 nav > a {
   margin-left: 25px;
 }
@@ -119,6 +132,91 @@ nav > a {
 .nav-item:hover {
   transform: scale(1.2);
 }
+
+#resume::after {
+  content: "";
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  margin-left: -3px;
+
+  background-size: 100%;
+  background-image: url("../assets/icons/arrow-square-out-fill-svgrepo-com.svg");
+} */
+
+nav {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 15vh;
+  z-index: 1;
+  background-color: #151531;
+  /* background: linear-gradient(217deg, #39beff 30%, #151531),
+    linear-gradient(127deg, #ffbb39 20%, #151531),
+    radial-gradient(ellipse at 85% 50%, #151531, #39beff),
+    linear-gradient(336deg, #ffbb39 30%, #151531);
+  background-blend-mode: difference; */
+  border-bottom: solid white;
+  overflow: hidden;
+}
+
+/* targets the anchor around the logo */
+nav > a {
+  margin-left: 25px;
+}
+
+.logo {
+  align-self: center;
+  width: 72px;
+  height: 72px;
+  transition: all 200ms ease-in-out;
+}
+
+.logo:hover {
+  transform: scale(1.1);
+}
+
+.nav-item {
+  margin: 5px 15px;
+  padding: 5px;
+  display: inline-block;
+  list-style: none;
+  font-family: "Orbitron", sans-serif;
+  font-size: 22px;
+  border-radius: 5px;
+  border: 1px solid white;
+  color: white;
+  text-shadow: 0 0 5px #c051ff;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  transition: all 200ms ease-in-out;
+  z-index: 1;
+}
+
+.nav-item a {
+  color: inherit;
+  text-decoration: none;
+  z-index: 1;
+}
+
+.nav-item:hover {
+  transform: scale(1.1);
+  border-color: #c051ff;
+  box-shadow: #c051ff 0px 0px 10px 10px;
+}
+
+#resume {
+  margin-right: 30px;
+}
+
+/* #resume:hover {
+  background-color: #404be3;
+} */
 
 #resume::after {
   content: "";
@@ -192,9 +290,19 @@ nav > a {
   background-color: #151531;
 }
 
+.project-item h3 {
+  font-size: 1.5rem;
+  color: #39beff;
+}
+
+.project-item p,
+.project-item a {
+  font-size: 0.75rem;
+}
+
 .project-item:hover {
-  border-color: #c051ff;
-  box-shadow: #c051ff 0px 0px 20px 20px;
+  border-color: #39beff;
+  box-shadow: #39beff 0px 0px 20px 20px;
 }
 
 .project-thumbnail {
@@ -210,47 +318,15 @@ nav > a {
   flex: 2;
   display: flex;
   justify-content: space-between;
+  gap: 15px;
   max-height: 100%;
   flex-direction: column;
+  overflow: auto;
 }
 
 .project-content * {
   padding: 0;
   margin: 0;
-}
-
-.project-content h3 {
-  font-size: 1.5rem;
-  color: #39beff;
-}
-
-.project-content a::after {
-  content: "";
-  display: inline-block;
-  width: 1em;
-  height: 1em;
-  margin-left: 3px;
-
-  background-size: 100%;
-  background-image: url("../assets/icons/github-142-svgrepo-com.svg");
-}
-
-.view-github-btn {
-  display: inline-block;
-  text-decoration: none;
-  background-color: #c051ff;
-  color: white;
-  padding: 5px 10px;
-  border-radius: 5px;
-}
-
-.view-github-btn:hover {
-  background-color: #39beff;
-}
-
-.github-icon {
-  width: 20px;
-  height: 20px;
 }
 
 /* ---------------------------- */
@@ -266,6 +342,7 @@ nav > a {
   justify-content: center;
   gap: 20px;
   margin-bottom: 10%;
+  overflow: auto;
 }
 
 .social-media a {
@@ -274,13 +351,14 @@ nav > a {
 
 .social-media ion-icon {
   justify-self: center;
-  font-size: 32px;
+  font-size: 64px;
   color: white;
-  transition: transform 200ms ease-in-out;
+  transition: transform 100ms ease-in-out;
 }
 
 .social-media ion-icon:hover {
   transform: scale(1.2);
+  color: #39beff;
 }
 
 /* ---------------------------- */
