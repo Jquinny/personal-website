@@ -1,0 +1,82 @@
+/* ─────────────────────────────────────────────────────────────────────────
+   animations.css
+   All @keyframe definitions and the scroll-reveal base/visible states.
+   Individual components reference these keyframe names directly.
+   ───────────────────────────────────────────────────────────────────────── */
+
+/* ── Keyframes ───────────────────────────────────────────────────────────── */
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0);    }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* Animated arrow in the hero scroll hint */
+@keyframes scrollPulse {
+  0%, 100% { opacity: 0.4; transform: scaleY(0.8); }
+  50%       { opacity: 1;   transform: scaleY(1);   }
+}
+
+/* Blinking cursor used by the typewriter */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+/* Glitch flicker on the hero name */
+@keyframes glitch {
+  0%, 90%, 100% {
+    text-shadow: 0 0 40px var(--glow), 0 0 80px rgba(0, 212, 255, 0.3);
+  }
+  91% {
+    text-shadow: -2px 0 var(--glow2), 2px 0 var(--glow3), 0 0 40px var(--glow);
+  }
+  92% {
+    text-shadow:  2px 0 var(--glow3), -2px 0 var(--glow2), 0 0 40px var(--glow);
+  }
+  93% {
+    text-shadow: 0 0 40px var(--glow), 0 0 80px rgba(0, 212, 255, 0.3);
+  }
+}
+
+/* ── Scroll-reveal system ────────────────────────────────────────────────── */
+/*
+   Elements marked `.reveal` start invisible and slide up.
+   scrollReveal.js adds `.visible` when they enter the viewport.
+   .timeline-item and .project-card have their own base states defined in
+   their respective CSS files but also receive `.visible` from the same script.
+*/
+
+.reveal {
+  opacity:    0;
+  transform:  translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.reveal.visible {
+  opacity:   1;
+  transform: translateY(0);
+}
+
+/* ── Typewriter cursor ───────────────────────────────────────────────────── */
+
+.typewriter-cursor {
+  display:        inline-block;
+  width:          3px;
+  height:         1em;
+  background:     var(--glow2);
+  vertical-align: middle;
+  margin-left:    2px;
+  animation:      blink 1s step-end infinite;
+}
+
+/* ── Glitch utility class (applied to .hero-name) ────────────────────────── */
+
+.glitch {
+  position:  relative;
+  animation: glitch 8s infinite;
+}

@@ -1,0 +1,67 @@
+/* ─────────────────────────────────────────────────────────────────────────
+   effects.css
+   Ambient visual layer: custom cursor dot + ring, fixed canvas starfield,
+   and the CRT scanline overlay.
+   ───────────────────────────────────────────────────────────────────────── */
+
+/* ── Custom cursor ───────────────────────────────────────────────────────── */
+
+.cursor {
+  position:   fixed;
+  width:      12px;
+  height:     12px;
+  background: var(--glow);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index:    9999;
+  transform:  translate(-50%, -50%);
+  transition: transform 0.1s, width 0.2s, height 0.2s, background 0.2s;
+  box-shadow: 0 0 10px var(--glow), 0 0 30px var(--glow);
+  mix-blend-mode: screen;
+}
+
+.cursor-ring {
+  position:   fixed;
+  width:      36px;
+  height:     36px;
+  border:     1px solid var(--glow);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index:    9998;
+  transform:  translate(-50%, -50%);
+  transition: transform 0.15s ease-out, width 0.3s, height 0.3s;
+  opacity:    0.5;
+}
+
+/* Enlarge + recolour dot when hovering interactive elements */
+body:has(a:hover) .cursor,
+body:has(button:hover) .cursor {
+  width:      20px;
+  height:     20px;
+  background: var(--glow2);
+}
+
+/* ── Starfield canvas ────────────────────────────────────────────────────── */
+
+#starfield {
+  position:       fixed;
+  inset:          0;
+  z-index:        0;
+  pointer-events: none;
+}
+
+/* ── CRT scanline overlay ────────────────────────────────────────────────── */
+
+.scanlines {
+  position:       fixed;
+  inset:          0;
+  z-index:        1;
+  pointer-events: none;
+  background:     repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0, 0, 0, 0.07) 2px,
+    rgba(0, 0, 0, 0.07) 4px
+  );
+}

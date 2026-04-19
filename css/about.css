@@ -1,0 +1,127 @@
+/* ─────────────────────────────────────────────────────────────────────────
+   about.css
+   Two-column about layout: bio text + skill tags on the left,
+   framed headshot on the right.
+   ───────────────────────────────────────────────────────────────────────── */
+
+/* ── Section grid ───────────────────────────────────────────────────────── */
+
+#about .about-grid {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 64px;
+  align-items: start;
+}
+
+/* ── Bio text ────────────────────────────────────────────────────────────── */
+
+.about-text p {
+  color: var(--muted);
+  margin-bottom: 20px;
+  font-size: 0.95rem;
+  line-height: 1.9;
+}
+.about-text p strong {
+  color: var(--text);
+}
+
+/* ── Skills list ─────────────────────────────────────────────────────────── */
+
+.about-skills {
+  margin-top: 32px;
+}
+
+.skills-label {
+  font-size: 0.7rem;
+  color: var(--green);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.skill-tag {
+  font-size: 0.78rem;
+  color: var(--muted);
+  padding: 6px 12px;
+  border: 1px solid var(--border);
+  letter-spacing: 0.05em;
+  transition:
+    color 0.2s,
+    border-color 0.2s,
+    box-shadow 0.2s;
+  cursor: none;
+}
+.skill-tag::before {
+  content: "▸ ";
+  color: var(--glow);
+}
+.skill-tag:hover {
+  color: var(--text);
+  border-color: var(--glow);
+  box-shadow: 0 0 10px rgba(0, 212, 255, 0.15);
+}
+
+/* ── Headshot ────────────────────────────────────────────────────────────── */
+
+.about-photo-wrap {
+  position: relative;
+}
+
+.about-photo-frame {
+  position: relative;
+  width: 100%;
+}
+.about-photo-frame::before {
+  content: "";
+  position: absolute;
+  inset: -6px;
+  border: 1px solid var(--glow);
+  z-index: -1;
+  opacity: 0.4;
+}
+.about-photo-frame::after {
+  content: "";
+  position: absolute;
+  inset: -12px;
+  border: 1px solid var(--glow);
+  z-index: -2;
+  opacity: 0.15;
+}
+
+.about-photo {
+  width: 100%;
+  display: block;
+}
+
+.photo-caption {
+  font-family: var(--font-retro);
+  font-size: 1rem;
+  color: var(--muted);
+  text-align: center;
+  margin-top: 12px;
+  letter-spacing: 0.1em;
+}
+
+/* ── Responsive ─────────────────────────────────────────────────────────── */
+
+@media (max-width: 768px) {
+  #about .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-photo-wrap {
+    order: -1;
+    max-width: 220px;
+    margin: 0 auto;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}

@@ -1,0 +1,30 @@
+/* ─────────────────────────────────────────────────────────────────────────
+   variables.css
+   Design tokens: colors, fonts, spacing. Edit here to retheme everything.
+   ───────────────────────────────────────────────────────────────────────── */
+
+:root {
+  /* Backgrounds */
+  --bg:      #04080f;
+  --bg2:     #070d1a;
+  --surface: #0a1628;
+
+  /* Borders */
+  --border:  #1a3a5c;
+
+  /* Glow / accent palette */
+  --glow:    #00d4ff;   /* primary cyan  */
+  --glow2:   #ff6b35;   /* orange accent */
+  --glow3:   #a855f7;   /* purple accent */
+  --accent:  #00d4ff;   /* alias for --glow */
+  --green:   #00ff88;   /* section-label green */
+
+  /* Text */
+  --text:    #c8e6f5;
+  --muted:   #5a8aa0;
+
+  /* Typography */
+  --font-mono:    'Share Tech Mono', monospace;
+  --font-display: 'Orbitron', monospace;
+  --font-retro:   'VT323', monospace;
+}

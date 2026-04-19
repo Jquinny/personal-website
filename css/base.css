@@ -1,0 +1,97 @@
+/* ─────────────────────────────────────────────────────────────────────────
+   base.css
+   Reset, body defaults, and the two layout primitives used everywhere:
+   .page-wrap (stacking context above canvas) and section (max-width + padding).
+   ───────────────────────────────────────────────────────────────────────── */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-mono);
+  font-size: 16px;
+  line-height: 1.7;
+  overflow-x: hidden;
+  cursor: none; /* replaced by custom cursor */
+}
+
+/* Sits above the canvas (z-index 0) and scanlines (z-index 1) */
+.page-wrap {
+  position: relative;
+  z-index: 2;
+}
+
+/* to ensure only the custom cursor is shown */
+a {
+  cursor: none;
+}
+
+/* Default section container — individual section files can override as needed */
+section {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 100px 24px;
+}
+
+/* ── Shared section header components ───────────────────────────────────── */
+
+.section-header {
+  margin-bottom: 64px;
+}
+
+.section-label {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--green);
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+.section-label::before {
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 1px;
+  background: var(--green);
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 5vw, 3rem);
+  font-weight: 700;
+  color: #fff;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+.section-title .accent {
+  color: var(--glow);
+  text-shadow: 0 0 30px var(--glow);
+}
+
+.section-line {
+  margin-top: 20px;
+  height: 1px;
+  background: linear-gradient(to right, var(--border), transparent);
+}
+
+/* ── Responsive ─────────────────────────────────────────────────────────── */
+
+@media (max-width: 768px) {
+  section {
+    padding: 80px 20px;
+  }
+}
